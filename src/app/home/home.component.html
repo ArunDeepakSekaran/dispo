@@ -1,0 +1,46 @@
+<!-- <h1>fhhjjj</h1> -->
+
+<section class="hero text-center py-5">
+    <h1>MADE BY DOCTORS</h1>
+    <h2>MADE FOR <span class="text-primary">DOCTORS</span></h2>
+    <p>Dispo Doc - Manufacturer, Stockist & Distributor of medical disposable products</p>
+    <button class="btn btn-primary">Contact Us</button>
+</section>
+
+<section class="container py-5">
+    <h2>Our Products</h2>
+    <div class="row">
+      <div class="col-md-3" *ngFor="let product of products">
+        <div class="card">
+          <img [src]="product.image" class="card-img-top">
+          <div class="card-body">
+            <p>{{ product.name }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="bg-primary text-white text-center py-5">
+    <h2>Why Choose Dispo Doc?</h2>
+    <div class="row">
+      <div class="col-md-3">Direct Manufacturer</div>
+      <div class="col-md-3">Personalized Applications</div>
+      <div class="col-md-3">Made in India</div>
+      <div class="col-md-3">By Doctors, for Doctors</div>
+    </div>
+</section>
+
+<section class="container py-5">
+    <h2>Trusted by The People</h2>
+    <div class="row">
+      <div class="col-md-4" *ngFor="let review of reviews">
+        <div class="card">
+          <div class="card-body">
+            <p>{{ review.content }}</p>
+            <h5>{{ review.author }}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>

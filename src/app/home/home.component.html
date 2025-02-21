@@ -1,11 +1,64 @@
 <!-- <h1>fhhjjj</h1> -->
 
-<section class="hero text-center py-5">
+<!-- <section class="hero text-center py-5">
     <h1>MADE BY DOCTORS</h1>
     <h2>MADE FOR <span class="text-primary">DOCTORS</span></h2>
     <p>Dispo Doc - Manufacturer, Stockist & Distributor of medical disposable products</p>
     <button class="btn btn-primary">Contact Us</button>
+</section> -->
+
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="gradient-circle"></div>
+  <a class="navbar-brand" href="#">Dispo Doc</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a class="nav-link" href="#home">Home1</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Why Us</a></li>
+      <li class="nav-item"><a class="nav-link" href="#home">Testimonials</a></li>
+    </ul>
+  </div>
+</nav> -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="gradient-circle"></div>
+  <a class="navbar-brand d-flex align-items-center" href="#" style="margin-left: 0.9rem;">
+    <img src="assets/logo.png" alt="Logo" width="40" height="40" class="mr-2"> 
+    <span clas="text">Dispo Doc</span>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link" href="#home"><span class="text">Home</span></a></li>
+      <li class="nav-item"><a class="nav-link" href="#"><span class="text">Products</span></a></li>
+      <li class="nav-item"><a class="nav-link" href="#"><span class="text">Why Us</span></a></li>
+      <li class="nav-item"><a class="nav-link" href="#home"><span class="text">Testimonials</span></a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<section class="hero d-flex align-items-center py-5">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6 texts" >
+              <h1>MADE BY DOCTORS</h1>
+              <h2>MADE FOR <span class="text-primary">DOCTORS</span></h2>
+              <p>Dispo Doc - Manufacturer, Stockist & Distributor of medical disposable products</p>
+              <button class="btn btn-primary">Contact Us</button>
+          </div>
+          <div class="col-md-6" style="text-align: center;">
+              <img src="assets/attach_1.png" alt="Doctor" style="width: 50%;height: 50%;">
+          </div>
+      </div>
+  </div>
 </section>
+
 
 <section class="container py-5">
     <h2>Our Products</h2>
@@ -31,7 +84,7 @@
     </div>
 </section>
 
-<section class="container py-5">
+<section id="home" class="container py-5">
     <h2>Trusted by The People</h2>
     <div class="row">
       <div class="col-md-4" *ngFor="let review of reviews">

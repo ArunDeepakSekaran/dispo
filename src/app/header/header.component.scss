@@ -7,3 +7,20 @@
     margin-right: 15px;
   }
   
+  .gradient-circle {
+    position: absolute;
+    left: -18%;
+    opacity: 0.29;
+    width: 650px; /* Adjust as needed */
+    height: 650px; /* Adjust as needed */
+    border-radius: 50%;
+    background: radial-gradient(circle,  
+      rgba(49, 95, 150, 0) 0%,  /* Deep blue center */
+      rgba(49, 95, 150, 0.3) 1%, /* Soft fade outward */
+      rgba(49, 95, 150, 0.3) 0.1% /* Very light outer glow */
+    );
+    
+    box-shadow: 
+      0 0 80px 40px rgba(49, 95, 150, 0.2),  /* Main soft glow */
+      0 0 120px 60px rgba(49, 95, 150, 0.1); /* Extra moon-like reflection */
+}

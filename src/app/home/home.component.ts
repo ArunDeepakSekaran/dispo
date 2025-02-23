@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit{
 
+  @ViewChild('productCard', { read: ElementRef }) productContainer!: ElementRef;
+
   reviews:any = [
     { content: 'Great quality products! Highly recommended.', author: 'Dr. A. Sharma' },
     { content: 'Affordable and reliable medical disposables.', author: 'Dr. R. Kumar' },
@@ -14,15 +16,34 @@ export class HomeComponent implements OnInit{
   ];
 
   products:any = [
-    { name: 'Surgical Gloves', image: 'assets/images/gloves.jpg' },
-    { name: 'Face Masks', image: 'assets/images/mask.jpg' },
-    { name: 'Disposable Gowns', image: 'assets/images/gown.jpg' },
-    { name: 'IV Cannula', image: 'assets/images/cannula.jpg' },
+    { name: 'Surgical Gloves', image: 'assets/img_1.jpeg' },
+    { name: 'Face Masks', image: 'assets/img_2.jpeg' },
+    { name: 'Disposable Gowns', image: 'assets/img_3.jpeg' },
+    { name: 'IV Cannula', image: 'assets/img_4.jpeg' },
+    { name: 'Cannula', image: 'assets/img_5.jpeg' },
+    { name: 'Surgical Gloves', image: 'assets/img_1.jpeg' },
+    { name: 'Face Masks', image: 'assets/img_2.jpeg' },
+    { name: 'Disposable Gowns', image: 'assets/img_3.jpeg' },
   ];
 
   ngOnInit(): void {
     console.log('Method not implemented.');
   }
 
+  scrollToSection(sectionId: string) {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  scrollLeft() {
+    if (this.productContainer) {
+      this.productContainer.nativeElement.scrollLeft -= 250; // Adjust scroll amount
+    }
+  }
+
+  scrollRight() {
+    if (this.productContainer) {
+      this.productContainer.nativeElement.scrollLeft += 250;
+    }
+  }
   
 }

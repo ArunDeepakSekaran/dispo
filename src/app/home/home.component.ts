@@ -26,6 +26,26 @@ export class HomeComponent implements OnInit{
     { name: 'Disposable Gowns', image: 'assets/img_3.jpeg' },
   ];
 
+  stars = [1, 2, 3, 4];
+
+  testimonials = [
+    {
+      name: 'Josh',
+      avatar: 'assets/avatar1.png',
+      message: 'Absolutely love Dispo Doc’s products! The quality is top-notch, and I feel healthier already. Fast delivery and great customer support. Highly recommended!'
+    },
+    {
+      name: 'John',
+      avatar: 'assets/avatar1.png',
+      message: 'Excellent service! The supplements are effective, and I appreciate the natural ingredients. Dispo Doc truly cares about customer satisfaction. Will buy again!'
+    },
+    {
+      name: 'Joseph',
+      avatar: 'assets/avatar1.png',
+      message: 'Dispo Doc never disappoints! Their healthcare products are reliable, safe, and affordable. Plus, the packaging is great. My go-to brand for wellness!'
+    }
+  ];
+
   ngOnInit(): void {
     console.log('Method not implemented.');
   }

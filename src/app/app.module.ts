@@ -24,6 +24,8 @@ import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { ButtonModule } from 'primeng/button';
+import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,9 @@ import { FooterComponent } from './footer/footer.component';
     ReactiveFormsModule,
     MatExpansionModule,
     AppRoutingModule,
-    CommonModule
+    CommonModule,
+    InputTextModule,
+    ButtonModule
   ],
   providers: [
     {

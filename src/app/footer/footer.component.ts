@@ -7,6 +7,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 })
 export class FooterComponent {
 
+  mail:any = 'app.dispodoc@gmail.com';
   @ViewChild('mapIframe', { static: false }) mapIframe!: ElementRef<HTMLIFrameElement>;
 
   latitude:any = 12.666174;
@@ -40,6 +41,15 @@ export class FooterComponent {
     if (this.mapIframe) {
       this.mapIframe.nativeElement.src = mapUrl;
     }
+  }
+
+  scrollToSection(sectionId: string) {
+    setTimeout(() => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 0);
   }
 
 }

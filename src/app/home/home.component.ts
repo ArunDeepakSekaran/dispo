@@ -50,8 +50,17 @@ export class HomeComponent implements OnInit{
     console.log('Method not implemented.');
   }
 
+  // scrollToSection(sectionId: string) {
+  //   document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+  // }
+
   scrollToSection(sectionId: string) {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 0);
   }
 
   scrollLeft() {

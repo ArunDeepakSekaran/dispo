@@ -13,7 +13,7 @@
             <div class="row gy-4">
             <!-- About Section -->
             <div class="col-md-4">
-                <h5 class="fw-bold mb-3"><span><img src="assets/logo-footer.png" alt="Logo"></span>Dispo Doc</h5>
+                <h5 class="fw-bold mb-3" style="cursor: pointer;" (click)="scrollToSection('home')"><span><img src="assets/logo-footer.png" alt="Logo"></span>Dispo Doc</h5>
                 <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae, nullam lobortis enim.</p> -->
                 <p>A Brand build with care, precision and passion for healthcare by Doctor. Finally Dispodoc is Made by Doctor, Made for Doctors</p>
                 <div class="social-icons mt-4">
@@ -28,10 +28,20 @@
             </div>
 
             <!-- Contact Us -->
-            <div class="col-md-4">
+            <div class="col-md-4" id="contact">
                 <h5 class="fw-bold mb-3">CONTACT US</h5>
-                <p><i class="fas fa-phone-alt me-2"></i> 99445 85824</p>
-                <p><i class="fas fa-envelope me-2"></i> dispodocgmail.com</p>
+                <!-- <p><i class="fas fa-phone-alt me-2"></i> 99445 85824</p> -->
+                <p>
+                    <a href="tel:9944585824" style="text-decoration: none; color: inherit;">
+                      <i class="fas fa-phone-alt me-2"></i> 99445 85824
+                    </a>
+                  </p>
+                <!-- <p><i class="fas fa-envelope me-2"></i> dispodocgmail.com</p> -->
+                <p>
+                    <a href="mailto:app.dispodoc@gmail.com" style="text-decoration: none; color: inherit;">
+                      <i class="fas fa-envelope me-2"></i> {{mail}}
+                    </a>
+                  </p>
                 <p><i class="fas fa-map-marker-alt me-2"></i> NO 2/160, NADU STREET, MELNAGAR, ARNI<br />
                 TIRUVANNAMALAI DISTRICT 9944585824<br />
                 632315

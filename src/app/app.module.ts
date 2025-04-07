@@ -1,4 +1,4 @@
-import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -24,8 +24,6 @@ import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { ButtonModule } from 'primeng/button';
-import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
   declarations: [
@@ -54,9 +52,7 @@ import { InputTextModule } from 'primeng/inputtext';
     ReactiveFormsModule,
     MatExpansionModule,
     AppRoutingModule,
-    CommonModule,
-    InputTextModule,
-    ButtonModule
+    CommonModule
   ],
   providers: [
     {
@@ -68,6 +64,6 @@ import { InputTextModule } from 'primeng/inputtext';
     { provide: MAT_DATE_LOCALE, useValue: 'en-GB' }, 
   ],
   bootstrap: [AppComponent],
-  schemas: [NO_ERRORS_SCHEMA] // Add this line
+  schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA] // Add this line
 })
 export class AppModule { }

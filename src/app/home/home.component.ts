@@ -16,33 +16,35 @@ export class HomeComponent implements OnInit{
   ];
 
   products:any = [
-    { name: 'Surgical Gloves', image: 'assets/img_1.jpeg' },
-    { name: 'Face Masks', image: 'assets/img_2.jpeg' },
-    { name: 'Disposable Gowns', image: 'assets/img_3.jpeg' },
-    { name: 'IV Cannula', image: 'assets/img_4.jpeg' },
-    { name: 'Cannula', image: 'assets/img_5.jpeg' },
-    { name: 'Surgical Gloves', image: 'assets/img_1.jpeg' },
-    { name: 'Face Masks', image: 'assets/img_2.jpeg' },
-    { name: 'Disposable Gowns', image: 'assets/img_3.jpeg' },
+    { name: 'Syringes', image: 'assets/syringe.jpeg' },
+    { name: 'IV infusion sets', image: 'assets/infusion_set.jpeg' },
+    { name: 'IV cannula', image: 'assets/iv_set_canula.jpeg' },
+    { name: 'Disposable gloves', image: 'assets/disposable_gloves.jpeg' },
+    { name: 'Scalp vein set', image: 'assets/scalp_vein.jpeg' },
+    { name: '3 way stopcock', image: 'assets/3_way_stopcock.jpeg' },
+    { name: 'Ear loop face mask', image: 'assets/ear_loop_face_mask.jpeg' },
+    { name: 'Foleys catheters', image: 'assets/foleys_catheter.jpeg' },
+    { name: 'Ryles tube', image: 'assets/ryles_tube.jpeg' },
+    { name: 'Urine collection bags', image: 'assets/uro_bag.jpeg' },
   ];
 
   stars = [1, 2, 3, 4];
 
   testimonials = [
     {
-      name: 'Josh',
+      name: 'Dr. Kavi Thendral. Medical Oncologist, Nobal Cancer Care, Tanjore',
       avatar: 'assets/avatar1.png',
-      message: 'Absolutely love Dispo Doc’s products! The quality is top-notch, and I feel healthier already. Fast delivery and great customer support. Highly recommended!'
+      message: 'We have been using Dispodoc’s syringes and gloves in our clinic now. The consistent quality and reliability make them our top choice for daily procedures.'
     },
     {
-      name: 'John',
+      name: 'Dr. R.M Kartick. Dr. Karthick Clinic, Pennagaram, Dharmapuri',
       avatar: 'assets/avatar1.png',
-      message: 'Excellent service! The supplements are effective, and I appreciate the natural ingredients. Dispo Doc truly cares about customer satisfaction. Will buy again!'
+      message: 'For day-to-day medical use, cost-effectiveness is critical—but not at the expense of safety. With this brand, we’ve found the perfect balance. Durable, dependable, and well within budget.'
     },
     {
-      name: 'Joseph',
+      name: 'Dr. Sowbaringa. Glitz cosmo skin & hair clinic, Dharmapuri',
       avatar: 'assets/avatar1.png',
-      message: 'Dispo Doc never disappoints! Their healthcare products are reliable, safe, and affordable. Plus, the packaging is great. My go-to brand for wellness!'
+      message: 'Gloves are nice to use.'
     }
   ];
 

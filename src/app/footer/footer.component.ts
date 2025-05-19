@@ -7,11 +7,11 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 })
 export class FooterComponent {
 
-  mail:any = 'app.dispodoc@gmail.com';
+  mail:any = 'dispodocprivatelimited@gmail.com';
   @ViewChild('mapIframe', { static: false }) mapIframe!: ElementRef<HTMLIFrameElement>;
 
-  latitude:any = 12.666174;
-  longitude:any = 79.277519;
+  latitude:any = 12.696976;
+  longitude:any = 79.195707;
 
   constructor(){
     

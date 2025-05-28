@@ -28,23 +28,26 @@ export class HomeComponent implements OnInit{
     { name: 'Urine collection bags', image: 'assets/uro_bag.jpeg' },
   ];
 
-  stars = [1, 2, 3, 4];
+  stars = [1, 2, 3, 4, 5];
 
-  testimonials = [
+  testimonials:any = [
     {
       name: 'Dr. Kavi Thendral. Medical Oncologist, Nobal Cancer Care, Tanjore',
       avatar: 'assets/avatar1.png',
-      message: 'We have been using Dispodoc’s syringes and gloves in our clinic now. The consistent quality and reliability make them our top choice for daily procedures.'
+      message: 'We have been using Dispodoc’s syringes and gloves in our clinic now. The consistent quality and reliability make them our top choice for daily procedures.',
+      rating: 5
     },
     {
       name: 'Dr. R.M Kartick. Dr. Karthick Clinic, Pennagaram, Dharmapuri',
       avatar: 'assets/avatar1.png',
+      rating: 5,
       message: 'For day-to-day medical use, cost-effectiveness is critical—but not at the expense of safety. With this brand, we’ve found the perfect balance. Durable, dependable, and well within budget.'
     },
     {
       name: 'Dr. Sowbaringa. Glitz cosmo skin & hair clinic, Dharmapuri',
       avatar: 'assets/avatar1.png',
-      message: 'Gloves are nice to use.'
+      message: 'Gloves are nice to use.',
+      rating: 4  
     }
   ];
 

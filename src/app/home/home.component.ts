@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AngularFireStorage } from '@angular/fire/compat/storage';
 
 @Component({
   selector: 'app-home',
@@ -51,8 +52,16 @@ export class HomeComponent implements OnInit{
     }
   ];
 
+  imageUrls: string[] = [];
+  error: string = '';
+  loading: boolean = true;
+
+  constructor(private storage: AngularFireStorage) {}
+
   ngOnInit(): void {
     console.log('Method not implemented.');
+
+    this.fetchImages();
   }
 
   // scrollToSection(sectionId: string) {
@@ -77,6 +86,38 @@ export class HomeComponent implements OnInit{
   scrollRight() {
     if (this.productContainer) {
       this.productContainer.nativeElement.scrollLeft += 250;
+    }
+  }
+
+  async fetchImages() {
+    // const folderRef = ref(this.storage, 'product_images/'); // 👈 same as React
+    // try {
+    //   const res = await listAll(folderRef);
+    //   const urls = await Promise.all(
+    //     res.items.map(itemRef => getDownloadURL(itemRef))
+    //   );
+    //   this.imageUrls = urls;
+    // } catch (err: any) {
+    //   console.error('Error fetching images:', err);
+    //   this.error = err.message;
+    // } finally {
+    //   this.loading = false;
+    // }
+
+    try{
+      const folderRef = this.storage.ref('product_images/');
+      folderRef.listAll().toPromise().then((res: any) => {
+        res.items.forEach((item: any) => {
+          item.getDownloadURL().then((url:any) => {
+            this.imageUrls.push(url);
+          });
+        });
+      });
+    } catch (err: any) {
+      console.error('Error fetching images:', err);
+      this.error = err.message;
+    } finally {
+      this.loading = false;
     }
   }
   

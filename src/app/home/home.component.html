@@ -227,3 +227,17 @@
     
 
 </section>
+
+<div class="container">
+  <h2>Product Images from Firebase Storage</h2>
+  
+  <p *ngIf="error" class="error">{{ error }}</p>
+  <p *ngIf="loading">Loading images...</p>
+
+  <div class="grid">
+    <img *ngFor="let url of imageUrls; let i = index"
+         [src]="url"
+         [alt]="'product-' + i"
+         class="product-img" />
+  </div>
+</div>
